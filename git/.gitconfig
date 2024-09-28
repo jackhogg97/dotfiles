@@ -1,0 +1,36 @@
+[user]
+  name = jackhogg97
+[init]
+	default = main
+	defaultBranch = main
+; Note this doesn't work with xcode
+[url "git@github.com:"]
+	insteadOf = https://github.com
+[commit]
+  # show diff in comments at bottom of commit message
+  verbose = true
+[rebase]
+  instructionFormat = "%s (%an)"
+  autostash = true
+[push]
+	autoSetupRemote = true
+[pull]
+  rebase = true
+[branch]
+	sort = -committerdate
+[maintenance]
+  auto = false
+  strategy = incremental
+[rerere]
+	enabled = true
+[alias]
+	lo = log --oneline
+  co = checkout
+  fp = push --force-with-lease
+  ir = rebase -i
+  ar = rebase --autosquash
+  rs = restore --staged
+  d = diff
+  dc = diff --cached
+  fx = "!git log --no-merges main.. --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit"
+
