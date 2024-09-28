@@ -13,3 +13,10 @@ require('nvim-tmux-navigation').setup {
       next = "<C-Space>",
     }
 }
+
+-- bbc.vim
+vim.cmd([[
+  let g:jira_domain='https://jira.dev.bbc.co.uk/'
+  au FileType gitcommit set completefunc=bbc#complete
+]])
+

@@ -51,6 +51,8 @@ return require('packer').startup(function(use)
     requires = { {'mattn/webapi-vim'} }
   }
 
+  use 'shumphrey/bbc.vim'
+
   use 'alexghergh/nvim-tmux-navigation'
 
 end)

@@ -84,6 +84,10 @@ g() {
   fi
 }
 
+# Load BBC specific config
+# Absolute path for symlink
+source ~/dotfiles/zsh/bbc.zsh
+
 # Shell intergrations
 eval "$(fzf --zsh)" # Enable fzf ^r
 eval "$(fnm env --use-on-cd)" # Auto run fmn when a directory contains .node-version or .nvmrc

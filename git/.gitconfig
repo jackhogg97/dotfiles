@@ -1,5 +1,9 @@
+; [user]
+;   name = jackhogg97
+;   email = jackhogg1997@gmail.com
 [user]
-  name = jackhogg97
+  name = jackhoggbbc
+  email = jack.hogg@bbc.co.uk
 [init]
 	default = main
 	defaultBranch = main
