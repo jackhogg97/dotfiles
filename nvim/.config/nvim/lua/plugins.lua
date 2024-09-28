@@ -49,7 +49,6 @@ return require('packer').startup(function(use)
     end
   }
 
-  use 'shumphrey/bbc.vim'
   use { 'mattn/vim-gist',
     requires = { {'mattn/webapi-vim'} }
   }

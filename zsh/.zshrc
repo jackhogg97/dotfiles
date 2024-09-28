@@ -91,10 +91,6 @@ intell() {
 	open -a "intellij idea ce" $1
 }
 
-# Load BBC specific config
-# Absolute path for symlink
-source ~/dotfiles/zsh/bbc.zsh
-
 # to customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
