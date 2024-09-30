@@ -91,13 +91,11 @@ _cosmos_ssh() {
 
     tmux attach-session
   else
-    # In tmux, broken
-    tmux new-window -d "ssh ${ip_addresses[1]},${region}";
+    tmux send-keys "ssh ${ip_addresses[1]},${region}" C-m
 
     ip_addresses=(${ip_addresses:1})
     for ip in ${ip_addresses[@]}; do
-      # tmux split-window -t $session_name "ssh ${ip},${region}"
-      tmux split-window "ssh ${ip},${region}"
+      tmux split-window -b "ssh ${ip},${region}"
     done
 
     tmux select-layout even-vertical
