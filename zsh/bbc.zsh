@@ -64,6 +64,6 @@ valid_bro() {
     exit 1
   fi
 
-  aws --profile search-dev s3 cp $1 s3://template-bucket-272821/
-  aws --profile search-dev cloudformation validate-template --template-url https://jack-sagemaker-bucket-029201.s3.eu-west-1.amazonaws.com/$1 --output table && echo "Templates valid bro 🤙"
+  aws --profile search-dev s3 cp $1 s3://template-validation-bucket-30429
+  aws --profile search-dev cloudformation validate-template --template-url https://template-validation-bucket-30429.s3.eu-west-1.amazonaws.com/$1 --output table && echo "Templates valid bro 🤙"
 }

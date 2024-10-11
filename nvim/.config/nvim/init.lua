@@ -17,6 +17,6 @@ require('nvim-tmux-navigation').setup {
 -- bbc.vim
 vim.cmd([[
   let g:jira_domain='https://jira.dev.bbc.co.uk/'
-  au FileType gitcommit set completefunc=bbc#complete
+  au FileType gitcommit,markdown set completefunc=bbc#complete
 ]])
 
