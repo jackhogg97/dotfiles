@@ -32,5 +32,5 @@
   rs = restore --staged
   d = diff
   dc = diff --cached
-  fx = "!git log --no-merges main.. --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit"
+  fx = "!git log --no-merges main.. --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup && git rebase --autosquash origin/main"
 
