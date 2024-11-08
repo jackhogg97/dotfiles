@@ -10,6 +10,7 @@ export AWS_DEFAULT_REGION='eu-west-1'
 # Aliases
 alias service="zsh ~/Development/ssh-to-services.zsh"
 alias node='node --use-openssl-ca'
+alias bootRun="gradle bootRun --args='--spring.profiles.active=local'"
 
 # Functions
 os_tunnel() {
