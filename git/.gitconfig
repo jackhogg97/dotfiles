@@ -4,6 +4,7 @@
 [user]
   name = jackhoggbbc
   email = jack.hogg@bbc.co.uk
+	signingkey = 06C520C55C8A1378
 [init]
 	default = main
 	defaultBranch = main
@@ -13,6 +14,7 @@
 [commit]
   # show diff in comments at bottom of commit message
   verbose = true
+	gpgsign = true
 [rebase]
   instructionFormat = "%s (%an)"
   autostash = true
