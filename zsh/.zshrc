@@ -26,6 +26,8 @@ zinit light Aloxaf/fzf-tab
 
 # Load completions
 autoload -U compinit && compinit
+autoload bashcompinit && bashcompinit
+complete -C '/usr/local/bin/aws_completer' aws
 
 # Cheat sheet
 fpath=(~/.zsh.d/ $fpath)
