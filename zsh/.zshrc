@@ -72,8 +72,8 @@ export GPG_TTY=$(tty) # For commit verification password
 # Aliases
 alias v='nvim'
 alias ls='ls --color'
-alias ll='ls -l --color'
-alias la='ls -la --color'
+alias ll='ls -lp --color | sort -k9,9 --ignore-case'
+alias la='ls -lAp --color | sort -k9,9 --ignore-case'
 alias c='clear'
 
 g() {
