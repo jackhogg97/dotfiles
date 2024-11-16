@@ -2,11 +2,7 @@ require('plugins')
 require('settings')
 require('remap')
 
-require('hardline').setup {
-  bufferline = true
-}
-
-require'nvim-tmux-navigation'.setup {
+require('nvim-tmux-navigation').setup {
     disable_when_zoomed = true,
     keybindings = {
       left = "<C-h>",

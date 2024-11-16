@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
   -- Color Schemes --
   use 'rebelot/kanagawa.nvim'
 
-  use 'ojroques/nvim-hardline'
+  use 'jackhogg97/nvim-hardline'
   use ({'nvim-treesitter/nvim-treesitter'}, {run = ':TSUpdate'})
   use 'nvim-treesitter/nvim-treesitter-context'
   use 'tpope/vim-fugitive'
