@@ -67,6 +67,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath' # Display dir
 export EDITOR='nvim'
 export LSCOLORS='gxfxcxdxbxegedabagacad' # `man ls` for details
 export AWS_PAGER=''
+export GPG_TTY=$(tty) # For commit verification password
 
 # Aliases
 alias v='nvim'
