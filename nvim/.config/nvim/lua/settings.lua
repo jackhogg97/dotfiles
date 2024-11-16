@@ -25,9 +25,14 @@ set.scrolloff = 5
 set.scrolljump = 5
 set.scrollback = 5
 
+-- Bash style command tab completion
 set.wildmode = 'longest,list,full'
 -- Persist undo history
 set.undofile = true
 
--- vim.g["python_recommended_style"] = 0
-
+-- Enable spelling
+-- zg - add word to dictionary
+-- zug - remove word from dictionary
+-- z= - suggestions
+set.spell = true
+set.spelllang = 'en_gb'
