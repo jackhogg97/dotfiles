@@ -30,9 +30,5 @@ set.wildmode = 'longest,list,full'
 -- Persist undo history
 set.undofile = true
 
--- Enable spelling
--- zg - add word to dictionary
--- zug - remove word from dictionary
--- z= - suggestions
-set.spell = true
+-- z= for spelling suggestions
 set.spelllang = 'en_gb'

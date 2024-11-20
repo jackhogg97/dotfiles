@@ -11,6 +11,5 @@ stow nvim
 stow git
 
 echo "In Tmux, run '<prefix> I' reload with '<prefix> R'"
-echo "In Neovim, run :PackerSync"
 
 exec zsh
