@@ -1,11 +1,11 @@
 [user]
   name = jackhogg97
 [init]
-	default = main
-	defaultBranch = main
+  default = main
+  defaultBranch = main
 ; Note this doesn't work with xcode
 [url "git@github.com:"]
-	insteadOf = https://github.com
+  insteadOf = https://github.com
 [commit]
   # show diff in comments at bottom of commit message
   verbose = true
@@ -13,18 +13,18 @@
   instructionFormat = "%s (%an)"
   autostash = true
 [push]
-	autoSetupRemote = true
+  autoSetupRemote = true
 [pull]
   rebase = true
 [branch]
-	sort = -committerdate
+  sort = -committerdate
 [maintenance]
   auto = false
   strategy = incremental
 [rerere]
-	enabled = true
+  enabled = true
 [alias]
-	lo = log --oneline
+  lo = log --oneline
   co = checkout
   fp = push --force-with-lease
   ir = rebase -i
