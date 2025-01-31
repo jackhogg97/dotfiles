@@ -4,6 +4,6 @@ return {
   "ojroques/nvim-hardline",
   lazy = false,
   opts = {
-    bufferline = true,
+    -- bufferline = true,
   }
 }
