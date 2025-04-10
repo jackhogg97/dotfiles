@@ -32,3 +32,7 @@ set.undofile = true
 
 -- z= for spelling suggestions
 set.spelllang = 'en_gb'
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown", "gitcommit" },
+  command = ":setlocal spell",
+})
