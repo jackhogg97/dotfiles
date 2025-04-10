@@ -18,6 +18,7 @@
 [rebase]
   instructionFormat = "%s (%an)"
   autostash = true
+  updateRefs = true
 [push]
   autoSetupRemote = true
 [pull]
