@@ -68,6 +68,7 @@ export EDITOR='nvim'
 export LSCOLORS='gxfxcxdxbxegedabagacad' # `man ls` for details
 export AWS_PAGER=''
 export GPG_TTY=$(tty) # For commit verification password
+export JAVA_HOME=`/usr/libexec/java_home -v 21` # Use Java 21
 
 # Aliases
 alias v='nvim'
