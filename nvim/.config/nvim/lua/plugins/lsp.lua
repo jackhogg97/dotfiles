@@ -11,21 +11,25 @@ return {
     -- https://github.com/hrsh7th/nvim-cmp
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-path",
+    },
     config = function()
       local cmp = require("cmp")
 
       cmp.setup({
         sources = {
-          {name = "nvim_lsp", max_item_count = 7},
+          { name = "nvim_lsp" },
+          { name = "path" },
+          { name = "copilot" },
         },
         preselect = "item",
         completion = {
           completeopt = "menu,menuone,noinsert"
         },
         mapping = cmp.mapping.preset.insert({
-          ["<CR>"] = cmp.mapping.confirm({select = false}),
-          ["<Tab>"] = cmp.mapping.select_next_item({behavior = "select"}),
-          ["<S-Tab>"] = cmp.mapping.select_prev_item({behavior = "select"}),
+          ["<Tab>"] = cmp.mapping.confirm({select = false}),
         }),
       })
     end
@@ -37,7 +41,6 @@ return {
     cmd = {"LspInfo", "LspInstall", "LspStart"},
     event = {"BufReadPre", "BufNewFile"},
     dependencies = {
-      {"hrsh7th/cmp-nvim-lsp"},
       {"williamboman/mason.nvim"},
       {"williamboman/mason-lspconfig.nvim"},
     },
