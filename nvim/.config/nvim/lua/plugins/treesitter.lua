@@ -8,7 +8,7 @@ return {
       local configs = require("nvim-treesitter.configs")
 
       configs.setup({
-        ensure_installed = { "lua", "vimdoc" },
+        ensure_installed = { "lua", "vimdoc", "markdown", "markdown_inline" },
         sync_install = false,
         auto_install = true,
         italics = false,

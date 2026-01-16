@@ -17,6 +17,9 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 source "${ZINIT_HOME}/zinit.zsh"
 
+# Favour homebrew installations over default mac
+export PATH="/opt/homebrew/bin:$PATH"
+
 # Plugins
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-syntax-highlighting
@@ -36,7 +39,7 @@ fpath=(~/.zsh.d/ $fpath)
 zinit cdreplay -q
 
 # Bindings
-set -o emacs 
+set -o emacs
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 # Edit current command in $EDITOR
@@ -69,11 +72,15 @@ export LSCOLORS='gxfxcxdxbxegedabagacad' # `man ls` for details
 export AWS_PAGER=''
 export GPG_TTY=$(tty) # For commit verification password
 
+# JAVA
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
 # Aliases
 alias v='nvim'
 alias ls='ls --color'
-alias ll='ls -lp --color | sort -k9,9 --ignore-case'
-alias la='ls -lAp --color | sort -k9,9 --ignore-case'
+alias ll='ls -lp --color'
+alias la='ls -lAp --color'
 alias c='clear'
 
 g() {
@@ -91,7 +98,7 @@ eval "$(thefuck --alias)"
 
 # Open in intellij
 intell() {
-	open -a "intellij idea ce" $1
+  open -a "intellij idea ce" $1
 }
 
 # to customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
