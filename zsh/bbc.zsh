@@ -35,6 +35,10 @@ os_tunnel() {
 piplogin() {
     AWS_PROFILE=tooling aws codeartifact login --tool pip --repository cosmic --domain bbc-search --domain-owner 536795411033 --region eu-west-1
 }
+# For pulling docker images
+alias ecrlogin="command aws --profile tooling ecr get-login-password | docker login --username AWS --password-stdin 536795411033.dkr.ecr.eu-west-1.amazonaws.com"
+# CA Login
+alias calogin="aws --profile tooling codeartifact login --tool npm --domain bbc-search --domain-owner 536795411033 --repository npm-search --namespace @bbc-search"
 
 source ~/dotfiles/zsh/cosmos_ssh.zsh
 source ~/dotfiles/zsh/solr.zsh
