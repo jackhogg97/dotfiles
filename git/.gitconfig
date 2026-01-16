@@ -1,14 +1,14 @@
 [user]
   name = jackhogg97
+  email = jackhogg1997@gmail.com
 [init]
   default = main
   defaultBranch = main
 ; Note this doesn't work with xcode
 [url "git@github.com:"]
-  insteadOf = https://github.com
+  insteadOf = https://github.com/
 [commit]
-  # show diff in comments at bottom of commit message
-  verbose = true
+  verbose = true # show diff in comments at bottom of commit message
 [rebase]
   instructionFormat = "%s (%an)"
   autostash = true
@@ -27,11 +27,7 @@
 [alias]
   lo = log --oneline
   co = checkout
-  fp = push --force-with-lease
-  ir = rebase -i
-  ar = rebase --autosquash
-  rs = restore --staged
+  pf = push --force-with-lease
   d = diff
   dc = diff --cached
-  fx = "!git log --no-merges main.. --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup && git rebase --autosquash origin/main"
-
+  fx = "!git log --no-merges main.. --pretty=format:'%h %s' | fzf | cut -c -7 | xargs -o git commit --fixup && git rebase --autosquash origin/main"
