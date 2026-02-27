@@ -82,6 +82,7 @@ alias ls='ls --color'
 alias ll='ls -lp --color'
 alias la='ls -lAp --color'
 alias c='clear'
+alias cdk='cdk --no-notices'
 
 g() {
   if [[ $# > 0 ]]; then
